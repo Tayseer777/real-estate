@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_type_residentials",
+  "info": {
+    "displayName": "residential"
+  },
+  "options": {},
+  "attributes": {
+    "classification": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "private"
+      ]
+    },
+    "apartment_villa": {
+      "type": "enumeration",
+      "enum": [
+        "villa",
+        "apartment"
+      ]
+    },
+    "apartment_villa_levels": {
+      "type": "integer"
+    },
+    "building_age": {
+      "type": "integer"
+    },
+    "building_area": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dealers",
+  "info": {
+    "singularName": "dealer",
+    "pluralName": "dealers",
+    "displayName": "Dealers"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dealer_name": {
+      "type": "string"
+    },
+    "dealer_phone_number": {
+      "type": "biginteger"
+    },
+    "lands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::land.land",
+      "inversedBy": "dealers"
+    }
+  }
+}

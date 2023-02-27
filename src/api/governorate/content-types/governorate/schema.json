@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "governorates",
+  "info": {
+    "singularName": "governorate",
+    "pluralName": "governorates",
+    "displayName": "governorates"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "governorate_name": {
+      "type": "string"
+    }
+  }
+}

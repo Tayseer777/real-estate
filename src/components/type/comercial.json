@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_type_comercials",
+  "info": {
+    "displayName": "comercial",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type_of_complex": {
+      "type": "enumeration",
+      "enum": [
+        "commercial complex",
+        "residential complex",
+        "industrial complex",
+        "agricultural complex"
+      ]
+    },
+    "complex_levels": {
+      "type": "integer"
+    },
+    "building_age": {
+      "type": "integer"
+    },
+    "building_area": {
+      "type": "string"
+    }
+  }
+}

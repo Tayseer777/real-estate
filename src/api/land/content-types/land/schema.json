@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lands",
+  "info": {
+    "singularName": "land",
+    "pluralName": "lands",
+    "displayName": "lands",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Governorate": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "plot_name": {
+      "type": "string"
+    },
+    "plot_nunber": {
+      "type": "biginteger"
+    },
+    "land_number": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "total_shares": {
+      "type": "biginteger"
+    },
+    "total_owned_shares": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Governorate"
+    },
+    "area": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "total_area": {
+      "type": "string"
+    },
+    "total_owned_area": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "location": {
+      "type": "customField",
+      "customField": "plugin::google-map-picker.place"
+    },
+    "dealers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dealer.dealer",
+      "mappedBy": "lands"
+    },
+    "oweners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::owener.owener",
+      "mappedBy": "lands"
+    },
+    "dynamic": {
+      "type": "dynamiczone",
+      "components": [
+        "type.residential",
+        "type.comercial",
+        "type.industrial",
+        "type.agricultural"
+      ]
+    }
+  }
+}

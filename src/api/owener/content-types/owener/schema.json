@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oweners",
+  "info": {
+    "singularName": "owener",
+    "pluralName": "oweners",
+    "displayName": "Oweners"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "owner_name": {
+      "type": "string"
+    },
+    "owner_phone_number": {
+      "type": "biginteger"
+    },
+    "lands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::land.land",
+      "inversedBy": "oweners"
+    }
+  }
+}
