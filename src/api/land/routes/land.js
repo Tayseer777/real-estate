@@ -6,4 +6,10 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::land.land');
+module.exports = createCoreRouter('api::land.land', {
+    config:{
+        find:{
+            policies:['is-admin']
+        }
+    }
+});

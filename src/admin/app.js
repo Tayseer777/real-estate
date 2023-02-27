@@ -27,6 +27,8 @@ export default {
     en:{
       "app.components.LeftMenu.navbrand.title": "Real-Estate",
       "app.components.LeftMenu.navbrand.workplace": "Michael Marashilian",
+      "app.components.HomePage.welcome.again": "Hi Michael!",
+
     },
     ar: {
       "app.components.LeftMenu.logout": "تسجيل خروج",

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "owener",
     "pluralName": "oweners",
-    "displayName": "Oweners"
+    "displayName": "Oweners",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,13 @@
       "relation": "manyToMany",
       "target": "api::land.land",
       "inversedBy": "oweners"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
     }
   }
 }
