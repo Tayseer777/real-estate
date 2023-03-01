@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = ({ env }) => {
-  const client = env('DATABASE_CLIENT', 'sqlite');
+  const client = env('DATABASE_CLIENT', 'postgres');
 
   const connections = {
     // mysql: {
@@ -30,24 +30,24 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'real_state'),
-        user: env('DATABASE_USERNAME', 'vuedale'),
-        password: env('DATABASE_PASSWORD', 'pbAza2En8bvbJZCXxBbmIYmwvMjL7np1'),
+        port: env.int('DATABASE_PORT'),
+        database: env('DATABASE_NAME'),
+        user: env('DATABASE_USERNAME'),
+        password: env('DATABASE_PASSWORD'),
         schema: env('DATABASE_SCHEMA', 'public'),
       },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+      // pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
-    sqlite: {
-      connection: {
-        filename: path.join(
-          __dirname,
-          '..',
-          env('DATABASE_FILENAME', 'data.db')
-        ),
-      },
-      useNullAsDefault: true,
-    },
+    // sqlite: {
+    //   connection: {
+    //     filename: path.join(
+    //       __dirname,
+    //       '..',
+    //       env('DATABASE_FILENAME', 'data.db')
+    //     ),
+    //   },
+    //   useNullAsDefault: true,
+    // },
   };
 
   return {
@@ -58,3 +58,28 @@ module.exports = ({ env }) => {
     },
   };
 };
+
+
+// module.exports = ({ env }) => ({
+//   connection: {
+//     client: 'postgres',
+//     connection: {
+//       host: env('DATABASE_HOST'),
+//       port: env.int('DATABASE_PORT'),
+//       database: env('DATABASE_NAME'),
+//       user: env('DATABASE_USERNAME'),
+//       password: env('DATABASE_PASSWORD'),
+//     },
+//     debug: false,
+//   },
+// });
+
+// module.exports = ({ env }) => ({
+//   connection: {
+//     client: 'sqlite',
+//     connection: {
+//       filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+//     },
+//     useNullAsDefault: true,
+//   },
+// });
